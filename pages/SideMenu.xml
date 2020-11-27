@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page name="SideMenu" project="abcd">
+  <location>C:\Users\I524893\Desktop/abcd</location>
+  <controls>
+    <Menu type="sidemenu" id="sideMenu">
+      <property>
+        <Title>Welcome !</Title>
+        <Color>primary</Color>
+        <ElementHtml />
+        <CSS name="sideMenuCls">
+          <TopBarColor>#0A3D62</TopBarColor>
+          <BackgroundImage />
+          <TopBarFontColor>#ffffff</TopBarFontColor>
+          <TopBarLetterSpecing>0</TopBarLetterSpecing>
+          <TopBarheight>54</TopBarheight>
+          <ListBackgroundColor>#fffff</ListBackgroundColor>
+          <ItemLetterSpecing>0</ItemLetterSpecing>
+          <ItemsFontColor>Gray</ItemsFontColor>
+          <ToolBarFont size="12" Italic="False" Bold="False" strikeout="False" underline="False" FontFamily="Roboto:400" FontFamilyName="Roboto" FontWeight="400" />
+          <ItemFont size="12" Italic="False" Bold="False" strikeout="False" underline="False" FontFamily="Roboto:400" FontFamilyName="Roboto" FontWeight="400" />
+        </CSS>
+      </property>
+      <MenuItems>
+        <Item>
+          <property>
+            <MenuItemId>item_1</MenuItemId>
+            <LeftTitle>Home</LeftTitle>
+            <LeftIcon />
+            <RightTitle />
+            <RightIcon />
+            <MenuRedirectPage>Home</MenuRedirectPage>
+          </property>
+        </Item>
+        <Item>
+          <property>
+            <MenuItemId></MenuItemId>
+            <LeftTitle>FAQs</LeftTitle>
+            <LeftIcon></LeftIcon>
+            <RightTitle></RightTitle>
+            <RightIcon></RightIcon>
+            <MenuRedirectPage>FAQs</MenuRedirectPage>
+          </property>
+        </Item>
+        <Item>
+          <property>
+            <MenuItemId></MenuItemId>
+            <LeftTitle>Help</LeftTitle>
+            <LeftIcon></LeftIcon>
+            <RightTitle></RightTitle>
+            <RightIcon></RightIcon>
+            <MenuRedirectPage>Help</MenuRedirectPage>
+          </property>
+        </Item>
+        <Item>
+          <property>
+            <MenuItemId></MenuItemId>
+            <LeftTitle>AboutUs</LeftTitle>
+            <LeftIcon></LeftIcon>
+            <RightTitle></RightTitle>
+            <RightIcon></RightIcon>
+            <MenuRedirectPage>AboutUs</MenuRedirectPage>
+          </property>
+        </Item>
+        <Item>
+          <property>
+            <MenuItemId></MenuItemId>
+            <LeftTitle>Feedback</LeftTitle>
+            <LeftIcon></LeftIcon>
+            <RightTitle></RightTitle>
+            <RightIcon></RightIcon>
+            <MenuRedirectPage>Feedback</MenuRedirectPage>
+          </property>
+        </Item>
+      </MenuItems>
+    </Menu>
+  </controls>
+</page>

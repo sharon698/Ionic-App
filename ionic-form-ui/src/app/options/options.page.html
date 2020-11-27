@@ -1,13 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>options</ion-title>
+    <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+    <ion-title>Options</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-row>
     <ion-col>
-      <ion-button type="submit" color="tertiary" expand="block">Book Cylinder</ion-button>
+      <ion-button [routerLink]="['/booking']" type="submit" color="tertiary" expand="block">Book Cylinder</ion-button>
+      
       <ion-button type="submit" color="tertiary" expand="block">Order Details</ion-button>
       
     </ion-col>

@@ -11,19 +11,23 @@
   <form>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="loginId" name="login"></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" [(ngModel)]="psw" name="psw"></ion-input>
     </ion-item>
 
     <ion-row>
       <ion-col>
-        <ion-button [routerLink]="['/options']" type="submit" color="success" expand="block">Sign In</ion-button>
+        <ion-button type="submit" color="success" expand="block" (click)="onSubmit()">Sign In</ion-button>
         <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
       </ion-col>
     </ion-row>
   </form>
+
+  <div *ngIf="isValid">
+    <span style="color: red;">Invalid Username or password</span>
+  </div>
 </ion-content>

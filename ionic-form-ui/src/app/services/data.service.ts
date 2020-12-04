@@ -6,10 +6,18 @@ import { Users } from '../models/Profiles'
 })
 export class DataService {
 
-  users: Users[] = []
+  users: Users[] = [];
+  
   private currentUser: Users;
 
-  constructor() { }
+  constructor() { 
+    this.users.push({
+      first_name: 'n',
+      last_name: 'n',
+      email: 'n',
+      password: 'n'
+    })
+  }
 
   addUser(f_name, l_name, email, psw) {
     this.users.push({

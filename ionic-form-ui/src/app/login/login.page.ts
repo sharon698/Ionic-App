@@ -14,13 +14,13 @@ export class LoginPage implements OnInit {
   psw = ""
   isValid = true;
 
-  sampleLoginId = "niteshbisht26@gmail.com"
-  samplepsw = "12345678"
-
   constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
+  }
 
+  ngDoCheck() {
+    this.isValid = true
   }
 
   onSubmit(){

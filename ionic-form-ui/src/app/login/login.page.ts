@@ -20,6 +20,10 @@ export class LoginPage implements OnInit {
   }
 
   ngDoCheck() {
+    // this.isValid = true
+  }
+
+  ionViewWillLeave() {
     this.isValid = true
   }
 
@@ -28,6 +32,7 @@ export class LoginPage implements OnInit {
     for (let i = 0; i < users.length; i++) {
       if (this.email == users[i].email) {
         if (this.psw == users[i].password) {
+          this.isValid = true
           this.dataService.setCurrentUser(users[i])
           this.router.navigate(['/options']);
           break;

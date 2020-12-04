@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
+import { DataService } from '../services/data.service'
 
 @Component({
   selector: 'app-registration',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationPage implements OnInit {
 
-  constructor() { }
+  first_name: string;
+  last_name: string;
+  email: string;
+  psw: string;
+
+  constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
+  }
+
+  register(){
+    this.dataService.addUser(this.first_name, this.last_name, this.email, this.psw);
+    this.router.navigate(['/login']);
   }
 
 }

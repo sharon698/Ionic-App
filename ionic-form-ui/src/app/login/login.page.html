@@ -11,12 +11,12 @@
   <form>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" [(ngModel)]="loginId" name="login"></ion-input>
+      <ion-input required type='text' [(ngModel)]="email" name="login"></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="psw" name="psw"></ion-input>
+      <ion-input required type="password" [(ngModel)]="psw" name="psw"></ion-input>
     </ion-item>
 
     <ion-row>
@@ -27,7 +27,7 @@
     </ion-row>
   </form>
 
-  <div *ngIf="isValid">
+  <div *ngIf="!isValid">
     <span style="color: red;">Invalid Username or password</span>
   </div>
 </ion-content>

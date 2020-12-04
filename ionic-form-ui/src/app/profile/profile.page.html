@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title size='small'>Profile</ion-title>
+    <ion-icon
+    [routerLink]="['/login']" 
+    slot="end" 
+    name="log-out-outline"
+    style="margin-right: 2px; height: 25px; width: 25px;"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>First Name</ion-label>
+    <ion-input value="{{ first_name }}" disabled></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Last Name</ion-label>
+    <ion-input size='small' value="{{ last_name }}" disabled></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input size='small' value="{{ email }}" disabled></ion-input>
+  </ion-item>
+
+</ion-content>

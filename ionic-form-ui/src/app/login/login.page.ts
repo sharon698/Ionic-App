@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
+import { DataService } from '../services/data.service'
+import { Users } from '../models/Profiles'
 
 @Component({
   selector: 'app-login',
@@ -8,27 +10,31 @@ import { Router } from '@angular/router'
 })
 export class LoginPage implements OnInit {
 
-  loginId: string = "";
+  email: string = "";
   psw = ""
-  isValid = false;
+  isValid = true;
 
   sampleLoginId = "niteshbisht26@gmail.com"
   samplepsw = "12345678"
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
 
   }
 
   onSubmit(){
-    if(this.loginId.length == 0 || this.loginId != this.sampleLoginId || this.psw.length == 0 || this.psw != this.samplepsw){
-      this.isValid = true
+    let users: Users[] = this.dataService.getUsers()
+    for (let i = 0; i < users.length; i++) {
+      if (this.email == users[i].email) {
+        if (this.psw == users[i].password) {
+          this.dataService.setCurrentUser(users[i])
+          this.router.navigate(['/options']);
+          break;
+        }
+      }
     }
-    else{
-      this.isValid = false
-      this.router.navigate(['/options'])
-    }
+    this.isValid = false
   }
 
 }
